@@ -19,7 +19,7 @@ android:
     - extra-android-m2repository
     - extra-google-m2repository
 before_install: mv library/google-services.json app/google-services.json
-install: ./gradlew clean assembleDebug check :library:prepareArtifacts :library:publishAllToMavenLocal
+install: ./gradlew clean :library:prepareArtifacts :library:publishAllToMavenLocal
 after_failure:
   # tests
   - cat app/build/reports/tests/testDebugUnitTest/index.html
